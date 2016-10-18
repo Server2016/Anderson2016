@@ -77,14 +77,12 @@ function drop(ev){
 
 function craft () {
     ref.result.innerHTML = '';
-
-    var Items = ref.craftingTable.querySelectorAll('span');
-
-    if (Items.length) {
+    var elem = ref.craftingTable.querySelectorAll('span');
+    if (elem.length) {
         var arrayItems = [];
         
-        for (var i = 0; i < Items.length; i++) {
-            arrayItems.push(Items[i].innerHTML);
+        for (var i = 0; i < elem.length; i++) {
+            arrayItems.push(elem[i].innerHTML);
         }
 
         var outputResult = making.doCraft(arrayItems);
@@ -102,8 +100,3 @@ function craft () {
 }
 
 
-document.getElementById('craftItems').addEventListener('click', toCraft);
-document.getElementById('wel').addEventListener('click', toCraft);
-document.getElementById('go').addEventListener('click', craft);
-document.getElementById('addBtn').addEventListener('click', addItem);
-itemsView();

@@ -1,7 +1,6 @@
 
 var making =  (function () {
-
-    var _obj = ['Земля', 'Огонь','Воздух', 'Вода'];
+    
 
     var rec = [
         {
@@ -44,7 +43,7 @@ var making =  (function () {
             }
 
             if (selectedRule.length === 0 && numberOfTheSameItem === Items.length) {
-                outputValue = rec[i].output;
+                outputValue = rec[i].out;
             }
 
 
